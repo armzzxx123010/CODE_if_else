@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Anukun-10</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-<center>
+    <center>
     <h1>Mr.Poly 999</h1>
     <input type="text" id="name">
     <button onclick="checkinput()">SUBMIT</button>
@@ -65,15 +65,15 @@
     <form>
         <label for="score">กรอกคะแนน:</label>
         <input type="text" id="score" name="score">
-        <button type="button" onclick="calculateGrade()">ตัดเกรด</button>
+        <button type="button" onclick="cal()">ตัดเกรด</button>
     </form>
     <p id="result"></p>
-center>
+
+    
+</center>
 </body>
 <script>
-    function cal2() {
-        var input = document.getElementById("name").value;
-    }
+    
     function checkinput() {
         var input = document.getElementById("name").value;
         if (input === "100") {
@@ -89,27 +89,27 @@ center>
         var x = document.getElementById("myselect").value;
         document.getElementById("demo2").innerHTML = "YOU SELECT : " + x;
     }
-    function calculateGrade() {
+    function cal() {
         var score = document.getElementById("score").value;
-        var result = document.getElementById("result");
+        var show = document.getElementById("result");
         if (score >= 80 && score <= 100) {
-            document.innerHTML = "เกรด A";
+            show.innerHTML = "เกรด A";
         } else if (score >= 75 && score <= 79) {
-            documentzz.innerHTML = "เกรด B+";
+            show.innerHTML = "เกรด B+";
         } else if (score >= 70 && score <= 74) {
-            result.innerHTML = "เกรด B";
+            show.innerHTML = "เกรด B";
         } else if (score >= 65 && score <= 69) {
-            result.innerHTML = "เกรด C+";
+            show.innerHTML = "เกรด C+";
         } else if (score >= 60 && score <= 64) {
-            result.innerHTML = "เกรด C";
+            show.innerHTML = "เกรด C";
         } else if (score >= 55 && score <= 59) {
-            result.innerHTML = "เกรด D+";
+            show.innerHTML = "เกรด D+";
         } else if (score >= 50 && score <= 54) {
-            result.innerHTML = "เกรด D";
+            show.innerHTML = "เกรด D";
         } else if (score >= 0 && score <= 49) {
-            result.innerHTML = "เกรด E";
+            show.innerHTML = "เกรด E";
         } else {
-            result.innerHTML = "อย่ากรอกเกิน!!!.";
+            show.innerHTML = "Error!!!.";
         }
     }
 </script>
